@@ -1,0 +1,165 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	  <link rel="shortcut icon" type="x-icon" href="static/img/logo_orange.png">
+	<title>Subscribe Newsletter</title>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Muli:300,700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #D17028;
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.box {
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	text-align: center;
+	max-width: 500px;
+}
+
+.box h2 {
+	margin: 10px 0 0;
+}
+
+.box p {
+	color: #312940;
+	margin: 10px;
+}
+
+.box img {
+	max-width: 100%;
+	width: 400px;
+}
+
+.form-control {
+	position: relative;
+	margin: 30px 0 20px;
+}
+
+.input {
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+	display: block;
+	font-family: 'Muli', sans-serif;
+	font-size: 14px;
+	height: 42px;
+	padding: 12px 25px;
+	width: 100%;
+}
+
+.btn {
+	background-color: #E7B67B;
+	border: 0;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 14px;
+	height: 42px;
+	padding: 12px 25px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.input:focus, .btn:focus {
+	outline: 0;
+}
+
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 999;
+}
+
+.floating-btn:hover {
+	background-color: #ffffff;
+	color: #001F61;
+}
+
+.floating-btn:focus {
+	outline: none;
+}
+
+.floating-text {
+	background-color: #001F61;
+	border-radius: 10px 10px 0 0;
+	color: #fff;
+	font-family: 'Muli';
+	padding: 7px 15px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	z-index: 998;
+	text-decoration: none;
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+	.social-panel-container.visible {
+		transform: translateX(0px);
+	}
+
+	.floating-btn {
+		right: 10px;
+	}
+}</style>
+
+</head>
+<body>
+	<div class="box">
+		<img src="https://scontent.ftbs5-2.fna.fbcdn.net/v/t39.30808-6/342218486_739362571317427_2168813038695789644_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=NScYV_GDtSQAX8tKpVT&_nc_oc=AQnvXiBy0sS6b-vqUlrlHSPl1ao3iUBj1Z2tLETnW3OsgW3RDPRLRgIXmQiYVsPVfrxIeSjGc-PpJ7vxFoZHJ3uA&_nc_ht=scontent.ftbs5-2.fna&oh=00_AfCHJm7ifQ_EVwCDUBENC6L2lfIqSU0TpWtogz6vmk2fPg&oe=6490DE11" alt="OnRoad" />
+		<h2>Subscribe to our Newsletter</h2>
+		<p>Our weekly newsletter provides you with the latest and most important happenings in the industry.</p>
+		<form action="{{ url_for('subscribe') }}" method="POST">
+			<div class="form-control">
+				<input type="email" class="input" name="email" placeholder="Enter email address" required/>
+				<button type="submit" class="btn">Subscribe</button>
+			</div>
+		</form>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<ul class="flash-messages">
+					{% for message in messages %}
+						<li class="{{ message[1] }}">{{ message }}</li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		{% endwith %}
+	</div>
+
+	<a class="floating-btn" href="/">Go Back</a>
+
+	<div class="floating-text">
+		 <a target="_blank">Travel in comfort, travel with OnRoad</a>
+
+
+
+

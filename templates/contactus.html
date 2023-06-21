@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="x-icon" href="static/img/logo_orange.png">
+  <title>Contact Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    body {
+	background-color: #D17028;
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	text-align: center;
+	max-width: 500px;
+}
+
+
+
+.box-img {
+	max-width: 100%;
+	width: 300px;
+}
+.floating-btn {
+	border-radius: 26.5px;
+	background-color: #001F61;
+	border: 1px solid #001F61;
+	box-shadow: 0 16px 22px -17px #03153B;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 12px 20px;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 999;
+}
+.rcorners1 {
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: 550px;
+  height: 700px;
+}
+  </style>
+</head>
+<body>
+<div data-bs-theme="dark">
+
+
+</div>
+<div class="rcorners1">
+  <div class="center-container; box;">
+    <div>
+              	<img src="https://scontent.ftbs5-2.fna.fbcdn.net/v/t39.30808-6/342218486_739362571317427_2168813038695789644_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=NScYV_GDtSQAX8tKpVT&_nc_oc=AQnvXiBy0sS6b-vqUlrlHSPl1ao3iUBj1Z2tLETnW3OsgW3RDPRLRgIXmQiYVsPVfrxIeSjGc-PpJ7vxFoZHJ3uA&_nc_ht=scontent.ftbs5-2.fna&oh=00_AfCHJm7ifQ_EVwCDUBENC6L2lfIqSU0TpWtogz6vmk2fPg&oe=6490DE11" alt="OnRoad" class="box"/>
+      <form method="post" action="/contact">
+      <div class="mb-3" style="margin-top: 20px">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control w-100"  id="email" name="email" placeholder="name@example.com" required>
+      </div>
+
+      <div class="mb-3" style="margin-top: 20px">
+
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control w-100"  id="password" name="password" placeholder="**********" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Type Text</label>
+        <textarea class="form-control w-100"  id="message" name="message" rows="3" required></textarea>
+      </div>
+        <button type="submit" class="btn btn-primary btn btn-success" id="liveToastBtn" style="width: auto">Send Email</button>
+      </form>
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <img src="static/img/logo2.png" class="rounded me-2" alt="OnRoad" style="height: 40px;width: 40px">
+      <strong class="me-auto">Email was sent successfully</strong>
+
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<a class="floating-btn"  href="/">Go Back</a>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+
+    if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+            toastBootstrap.show()
+        })
+    }
+</script>
+</body>
+</html>

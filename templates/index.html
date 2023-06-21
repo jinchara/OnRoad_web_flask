@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% block content %}
+            <div class="tm-section tm-section-pad tm-bg-gray" >
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+                            <div class="tm-article-carousel">
+
+                                <article class="tm-bg-white mr-2 tm-carousel-item">
+                                    <img src="static/img/img-01.jpg" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad" style="margin-bottom: 20px">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Spain - "La Piel de Toro"</h3></header>
+                                        <p>Spain is a beautiful country with rich architecture and a huge cultural heritage. The vibrant cities of Madrid and Barcelona are world-renowned for their arts and culture scene, fantastic food, incredible museums and impressive shopping options.</p>
+
+                                    </div>
+                                </article>
+                                <article class="tm-bg-white mr-2 tm-carousel-item">
+                                    <img src="static/img/img-02.jpg" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad" style="margin-bottom: 20px">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Vietnam - the land of “Ascending Dragon”</h3></header>
+                                        <p>Vietnam boasts a lot of gorgeous beaches because of its extensive coastline, including Ha Long Bay in the north, which is a UNESCO World Natural Heritage site and includes turquoise sea and limestone mountains.</p>
+
+                                    </div>
+                                </article>
+                                <article class="tm-bg-white mr-2 tm-carousel-item">
+                                    <img src="static/img/peru-machu-picchu-1_370x262.jpg" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad" style="margin-bottom: 20px">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Peru - "The Land of the Inkas"</h3></header>
+                                        <p>Peru's enticing array of attractions, landmarks and natural wonders are infinite. Celebrated for its textured landscapes, ancient cultural heritage, and delicious globally-recognised cuisine, this must-visit destination has something for every avid traveller.</p>
+
+                                    </div>
+                                </article>
+                                <article class="tm-bg-white mr-2 tm-carousel-item">
+                                    <img src="static/img/thai_370x262.jpg" alt="Image" class="img-fluid">
+                                    <div class="tm-article-pad" style="margin-bottom: 20px">
+                                        <header><h3 class="text-uppercase tm-article-title-2">Thailand - "Land of The Free" </h3></header>
+                                        <p>Thailand's name means "Land of the Free" in Thai, the official language of the country. It is the only country in southeast Asia that was never colonized by a European country. Thailand is famous for its beautiful beaches, magnificent temples, and flavorful cuisines such as Tom Yum Goong and Pad Thai. Thailand, known formerly as Siam, is a country in central South East Asia.</p>
+
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+                        {%endblock%}
+    {%block arvici%}
+           <div class="tm-section tm-bg-img" id="tm-section-1">
+                <div class="tm-bg-white ie-container-width-fix-2">
+                    <div class="container ie-h-align-center-fix">
+                        <div class="row">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tm-section-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 class="tm-section-title">We are here to help you?</h2>
+                            <p class="tm-color-white tm-section-subtitle">Subscribe to get our newsletters</p>
+                            <a href="/subscribe" class="tm-color-white tm-btn-white-bordered">Subscribe Newletters</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tm-section tm-position-relative">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="tm-section-down-arrow">
+                    <!--<polygon fill="#ee5057" points="0,0  100,0  50,60" ></polygon> -->
+                </svg>
+                <div class="container tm-pt-5 tm-pb-4">
+                    <div class="row text-center">
+                        <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
+                            <i class="fa tm-fa-6x fa-lock tm-color-primary tm-margin-b-20"></i>
+                            <h3 class="tm-color-primary tm-article-title-1">We take the safety of our clients very seriously</h3>
+                            <p>By following all local laws and regulations and taking extra safety precautions, we can ensure that our clients have the best experience while exploring the country.</p>
+
+                        </article>
+                        <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
+                            <i class="fa tm-fa-6x fa-car tm-color-primary tm-margin-b-20"></i>
+                            <h3 class="tm-color-primary tm-article-title-1">Comfort is an essential part of any successful trip</h3>
+                            <p>if you're looking for a comfortable travel experience, look no further than OnRoad. Let us take care of the details so that you can sit back, relax, and enjoy the journey.</p>
+
+                        </article>
+                        <article class="col-sm-12 col-md-4 col-lg-4 col-xl-4 tm-article">
+                            <i class="fa tm-fa-6x fa-user tm-color-primary tm-margin-b-20"></i>
+                            <h3 class="tm-color-primary tm-article-title-1">About us</h3>
+                            <p>Our company is still starting to grow in the territory of Georgia, our mission is connect tourists and guides or drivers to each other, take care of successful and safe completion of the tour and make travel easier for people.</p>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+    {%endblock%}
+
+
+            {%block video%}
+            <div class="tm-bg-video">
+                <div class="overlay">
+                </div>
+
+                <video autoplay loop class="tmVideo">
+                    <source src="static/videos/video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                {%endblock%}
